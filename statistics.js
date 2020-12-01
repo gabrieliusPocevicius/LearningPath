@@ -1,4 +1,8 @@
-let topics = [
+import {zingchart, ZC} from './zingchart/es6.js';
+// Modules must be imported EXPLICITLY when using es6 version
+import './zingchart/modules-es6/zingchart-pareto.min.js';
+
+var topics = [
     {"Arrays":295},
     {"Dynamic Programming":234},
     {"String": 207},
@@ -42,7 +46,9 @@ let topics = [
     {"Memoization":1},
     {"OOP": 1}
 ];
-let companies = [
+
+
+var companies = [
     {"Google":917},
     {"Amazon": 858},
     {"Facebook":583},
@@ -117,3 +123,26 @@ let companies = [
     {"Twitch":16}
 
 ]
+
+
+
+for (let i = 0; i < topics.length; i++) {
+    var str = Object.keys(topics[i]);
+    var values = Object.values(topics[i]);
+    document.getElementById("topics").innerHTML +=  `${str}:${values} `;
+}
+
+
+
+
+  zingchart.render({
+    id: 'myChart',
+    data: {
+      type: 'line',
+      series: [
+        { values: [54,23,34,23,43] },
+        { values: [10,15,16,20,40] }
+      ]
+    }
+  });
+
