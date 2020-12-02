@@ -1,6 +1,4 @@
-import {zingchart, ZC} from './zingchart/es6.js';
-// Modules must be imported EXPLICITLY when using es6 version
-import './zingchart/modules-es6/zingchart-pareto.min.js';
+
 
 var topics = [
     {"Arrays":295},
@@ -46,8 +44,6 @@ var topics = [
     {"Memoization":1},
     {"OOP": 1}
 ];
-
-
 var companies = [
     {"Google":917},
     {"Amazon": 858},
@@ -124,25 +120,45 @@ var companies = [
 
 ]
 
+var arrayOfTopics = [];
+var arrayOfStrings = [];
+
+
+let parent = document.getElementById('bar-container');
+
 
 
 for (let i = 0; i < topics.length; i++) {
-    var str = Object.keys(topics[i]);
-    var values = Object.values(topics[i]);
-    document.getElementById("topics").innerHTML +=  `${str}:${values} `;
-}
+    arrayOfTopics.push(Number(Object.values(topics[i])));
+    arrayOfStrings.push(String(Object.keys(topics[i])));
+    
+
+let badge = document.createElement('div');
+badge.classList.add('badge','badge-primary');
+badge.textContent = arrayOfStrings[i];
+parent.append(badge);
+
+};
+
+
+
+//console.log(arrayOfStrings);
+//console.log(arrayOfTopics);
 
 
 
 
-  zingchart.render({
-    id: 'myChart',
-    data: {
-      type: 'line',
-      series: [
-        { values: [54,23,34,23,43] },
-        { values: [10,15,16,20,40] }
-      ]
-    }
-  });
+
+
+
+
+
+
+
+
+
+  //document.getElementById('bar-container').append(unit); 
+
+  
+
 
