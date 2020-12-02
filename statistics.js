@@ -121,29 +121,125 @@ var companies = [
 ]
 
 var arrayOfTopics = [];
-var arrayOfStrings = [];
+var arrayOfTopicsStrings = [];
 
 
-let parent = document.getElementById('bar-container');
+var arrayOfCompany = [];
+var arrayOfComanyNames = [];
 
 
+let parentElement = document.getElementById('bar-container');
 
-for (let i = 0; i < topics.length; i++) {
-    arrayOfTopics.push(Number(Object.values(topics[i])));
-    arrayOfStrings.push(String(Object.keys(topics[i])));
+let parentElementCompany = document.getElementById('bar-companies');
+
+let counter = 0;
+
+function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+}
+  
+  
+  
+
+
+function loop(){
+
+    $('body').show(1000,function () {
+
+
+        for (let i = 0; i < topics.length; i++) {
+            
+            arrayOfTopics.push(Number(Object.values(topics[i])));
+            arrayOfTopicsStrings.push(String(Object.keys(topics[i])));
+        
+            arrayOfCompany.push(Number(Object.values(companies[i])));
+            arrayOfComanyNames.push(String(Object.keys(companies[i])));
+            ++counter;
+        
+        
+        let valueNumber = document.createElement('div');
+        animateValue(valueNumber, 0, arrayOfTopics[i], 2000);
+        
+        //valueNumber.style.padding = 10 + 'px';
+        //valueNumber.style.marginTop = 5 + 'px';
+        //valueNumber.style.width = arrayOfTopics[i] / 3 +'%';
+        valueNumber.classList.add('shadow-sm', 'text-center', 'card-tint');
+        valueNumber.textContent = arrayOfTopics[i];
+        
+        parentElement.append(valueNumber, counter);
+        
+        if(arrayOfTopics[i] < 20){
+            $(valueNumber).css('fontSize', 20);
+            
+        }else{
+            $(valueNumber).css('fontSize', arrayOfTopics[i]);
+        }
+       
+        
+       
+        $(valueNumber).hide();
+        $(valueNumber).fadeIn();
+        
+        
+        let badge = document.createElement('p');
+        
+        badge.classList.add('badge-primary', 'display-6', 'd-inline-flex', 'm-4', 'p-5');
+        
+        //badge.style.width = arrayOfTopics[i] / 5 +'%';
+        badge.textContent = arrayOfTopicsStrings[i];
+        
+        $(parentElement).append(badge);
+        
+            //company values
+            let barCompany = document.createElement('div');
+            animateValue(barCompany, 0, arrayOfCompany[i], 3000);
+            barCompany.style.fontSize = '40px';
+            barCompany.textContent = arrayOfCompany[i];
+            parentElementCompany.append(barCompany);
+            //company names
+            let barCompanyNames = document.createElement('p');
+            barCompanyNames.classList.add('text-dark');
+            barCompanyNames.style.paddingLeft = '30px';
+            barCompanyNames.style.fontSize = '30px';
+            barCompanyNames.textContent = arrayOfComanyNames[i];
+            $(parentElementCompany).append(barCompanyNames);
+            
+        };
+        $(parentElementCompany).hide();
+        $(parentElementCompany).fadeIn();
+        $('footer').show();
+    });
+    
+}
+
+$('body').hide();
+    $('footer').hide();
+$(document).ready(function () {
+    
+    loop();
+    
+});
+
+
+$('.carousel').carousel({
+    interval: 10000
+  });
+  
+
     
 
-let badge = document.createElement('div');
-badge.classList.add('badge','badge-primary');
-badge.textContent = arrayOfStrings[i];
-parent.append(badge);
 
-};
-
-
-
-//console.log(arrayOfStrings);
-//console.log(arrayOfTopics);
+//console.log(arrayOfTopicsStrings);
+//console.log(arrayOfTopics); //the numbers
 
 
 
