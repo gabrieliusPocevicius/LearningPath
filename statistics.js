@@ -255,6 +255,92 @@ $('.carousel').carousel({
 
   //document.getElementById('bar-container').append(unit); 
 
-  
+
+let num = [1, 2, 5, 10 ,22, 25, 40, 45];
 
 
+
+//
+function binarySearch(array, target) {
+
+    let left = 0;
+    let right = array.length - 1;
+
+    while (left < right) {
+        let mid = Math.floor((left + right) / 2);
+        if(target == array[mid]){
+            return mid;
+        }else if(target < array[mid]){
+            right = mid - 1;
+        }else{
+            left = mid + 1;
+        }
+    }
+    return false;
+
+}
+
+
+console.log(binarySearch(nums, 5));
+
+
+//Time complexity: O(log(n))
+
+
+
+//binary search takes in two parameters array to search and target;
+
+
+//if the target is 5
+//   left 0<-- mid 5 -->right 10
+// target assigned 5 and the middle is 5 then return 5 as result
+//if     5 < 10[mid] ?  :   
+//left = first element of the array
+//right = last element of the array
+// mid = left + right / 2
+
+//divide and Conquer Split method
+//if target is not met then remove the lesser
+
+// while left is less then right loop though the array
+// middle element is equal to the average of the left + right  
+// if target is equal to the array's index which is mid.
+
+const bs = (array, target)=>{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const search = (array, target)=>{
+
+    let left = 0;//left is first number
+    let right = array.length - 1;  //right is last number
+    while (left <= right) {// while the first number is less then then the last number 
+        let mid = Math.floor((left + right) / 2);// mid is first number plus last number  get the average
+        if(target === array[mid]){// if iterator reaches array index of specified number
+            return mid;//return result
+        }else if(target < array[mid]){
+            // moving right 
+            right = mid - 1;
+        }else{
+            left = mid + 1;
+        }
+    }
+}
