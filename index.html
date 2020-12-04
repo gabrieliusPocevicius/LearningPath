@@ -13,9 +13,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <button onclick="topFunction();" id="myBtn" title="Go to the top">Top</button> 
+  <button onclick="topFunction();" id="gotoTop" title="Go to the top"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+    <path d="M19.5 6.5L13 0L6.5 6.5L7.207 7.207L12.5 1.914L12.5 24H13.5L13.5 1.914L18.793 7.207L19.5 6.5Z" fill="#fff"/>
+    </g>
+    <defs>
+    <clipPath id="clip0">
+    <rect width="50" height="50" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+    </button> 
 
 
+
+    <button onclick="bottomFunction();" id="gotoBottom" title="Go to the bottom">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.5 17.5L13 24L19.5 17.5L18.793 16.793L13.5 22.086L13.5 0H12.5L12.5 22.086L7.207 16.793L6.5 17.5Z" fill="#fff"/>
+        </svg>
+        
+    </button>  
 
   <div class="container"></div>
   <!--<h1 id="welcome-coder" class="position-absolute text-center" >Welcome</h1>-->
@@ -86,12 +103,18 @@
           </p> 
           <p>The higher the number the more lightly you are to get asked a question related to that subject.</p>
         </div>
-        <div class="col">
+
+        <div class="col" hidden>
           <p class="p-3  d-inline-flex">
-            
+            As of 2020 on LeetCode 2,365 coding challenges are available
+            testing ground for potential candidates for a job at large companies such as Google, Amazon, and Microsoft.  
           </p> 
-      
-      
+          <p class="p-3  d-inline-flex">
+          The top three tags make over 31% of all the coding problems.They are Arrays, Dynamic Programming, and Strings.
+          </p>
+          <p class="p-3  d-inline-flex">
+             If you were to know only 39% of all the algorithms, which is 917 that is the same number of questions that Google could come up with.One is more then definitely a confident candidiate for the job.
+            </p>
         </div>
         <div class="col">
           <p class="p-3  d-inline-flex">
@@ -122,7 +145,7 @@
 <div class="d-inlne-flex container-fluid ">
 <div class="row">
   <h4 class="p-4 text-center col">Most Common Interview Problems Types</h4> 
-  <h4 class="p-4 text-center col">Companies with the most problems ;)</h4> 
+  <h4 class="p-4 text-center col">Companies with the most Interview questions</h4> 
   
 </div>
 <div class="row">
@@ -167,24 +190,34 @@
 <script type="module" type="text/javascript" src="./statistics.js"></script>
 <script>
 //Get the button
-var mybutton = document.getElementById("myBtn");
-
+var mybutton = document.getElementById("gotoTop");
+var scrollDownButton = document.getElementById('gotoBottom');
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+function bottomFunction(){
+return window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
 }
+
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+  return window.scrollTo({top: 0, behavior: 'smooth'});
+};
+
+
+$(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() > $(document).height() - 7000) {
+    mybutton.style.display = "block";
+   }else{
+    mybutton.style.display = "none";
+   }
+   if(window.scrollY > 1000) {
+    scrollDownButton.style.display = "block";
+   }else{
+    scrollDownButton.style.display = "none";
+   }
+   
+});
 
 
 </script>

@@ -120,6 +120,13 @@ var companies = [
 
 ]
 
+var topicDiscriptions = [
+'Arrays are a simple data structure for storing lots of similar items. They exist in all programming languages, and are used as the basis for most other data structures. On their own, Arrays can be used to solve many interesting problems. Arrays come up very often in interview problems'
+
+];
+
+
+
 var arrayOfTopics = [];
 var arrayOfTopicsStrings = [];
 
@@ -148,7 +155,44 @@ function animateValue(obj, start, end, duration) {
 }
   
   
-  
+function calculateData(){
+
+    let total = 0;
+    let topThree = 0 
+
+
+
+    for (let i = 0; i < topics.length; i++) {
+        arrayOfTopics.push(Number(Object.values(topics[i])));
+        arrayOfTopicsStrings.push(String(Object.keys(topics[i])));
+    
+        arrayOfCompany.push(Number(Object.values(companies[i])));
+        arrayOfComanyNames.push(String(Object.keys(companies[i])));
+
+
+
+
+    }
+   topThree =  arrayOfTopics[0] + arrayOfTopics[1] + arrayOfTopics[2];
+   console.log(topThree);
+
+
+
+total = arrayOfTopics.reduce((a, b)=>{return a+b});
+
+
+let google = 917 - total;
+
+let percent = Number(((917 / total) * 100).toFixed(0));
+console.log(percent);
+console.log('Total amount of interview questions that may be asked is 2,365' + total);
+console.log('Interesting factor 3 of the main topics make 31% of all the coding problems.');
+}
+
+
+
+
+calculateData();
 
 
 function loop(){
@@ -158,11 +202,7 @@ function loop(){
 
         for (let i = 0; i < topics.length; i++) {
             
-            arrayOfTopics.push(Number(Object.values(topics[i])));
-            arrayOfTopicsStrings.push(String(Object.keys(topics[i])));
-        
-            arrayOfCompany.push(Number(Object.values(companies[i])));
-            arrayOfComanyNames.push(String(Object.keys(companies[i])));
+
             ++counter;
         
         
@@ -191,6 +231,9 @@ function loop(){
         
         
         let badge = document.createElement('p');
+        
+        
+
         
         badge.classList.add('badge-primary', 'display-6', 'd-inline-flex', 'm-4', 'p-5');
         
@@ -281,7 +324,7 @@ function binarySearch(array, target) {
 }
 
 
-console.log(binarySearch(nums, 5));
+//console.log(binarySearch(num, 5));
 
 
 //Time complexity: O(log(n))
@@ -306,9 +349,6 @@ console.log(binarySearch(nums, 5));
 // middle element is equal to the average of the left + right  
 // if target is equal to the array's index which is mid.
 
-const bs = (array, target)=>{
-    
-}
 
 
 
