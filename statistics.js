@@ -324,14 +324,12 @@ else if(vals === 2){
    
 })
 
-
+/* 
 
 function binarySearch(array, target) {
-
     let left = 0;
     let right = array.length - 1;
-
-    while (left < right) {
+    while (left <= right) {
         let mid = Math.floor((left + right) / 2);
         if(target == array[mid]){
             return mid;
@@ -344,6 +342,10 @@ function binarySearch(array, target) {
     return false;
 
 }
+
+
+ */
+
 
 
 //console.log(binarySearch(num, 5));
