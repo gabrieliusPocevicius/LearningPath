@@ -308,6 +308,7 @@ $('#observe').hide();
 
 
 let vals = 0;
+
 $(obBtn).click((e)=>{
 ++vals;
 e.preventDefault();
@@ -322,7 +323,21 @@ else if(vals === 2){
     }
 
    
-})
+});
+
+
+
+
+$('#algos,#complex,.des-complex').hide();
+
+$('#listOfAlgo').on('click',()=>{
+   
+    
+    $('#algos,#complex,.des-complex').toggle(500);
+
+});
+
+
 
 /* 
 
