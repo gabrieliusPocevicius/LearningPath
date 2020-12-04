@@ -208,14 +208,14 @@ function loop(){
         
         let valueNumber = document.createElement('div');
         animateValue(valueNumber, 0, arrayOfTopics[i], 2000);
-        
+        valueNumber.classList.add('shadow-sm', 'text-center', 'card-tint');
+        valueNumber.textContent = arrayOfTopics[i];
         //valueNumber.style.padding = 10 + 'px';
         //valueNumber.style.marginTop = 5 + 'px';
         //valueNumber.style.width = arrayOfTopics[i] / 3 +'%';
-        valueNumber.classList.add('shadow-sm', 'text-center', 'card-tint');
-        valueNumber.textContent = arrayOfTopics[i];
         
-        parentElement.append(valueNumber, counter);
+        
+        
         
         if(arrayOfTopics[i] < 20){
             $(valueNumber).css('fontSize', 20);
@@ -240,21 +240,21 @@ function loop(){
         //badge.style.width = arrayOfTopics[i] / 5 +'%';
         badge.textContent = arrayOfTopicsStrings[i];
         
-        $(parentElement).append(badge);
+        $(parentElement).append(valueNumber, counter,badge);
         
             //company values
             let barCompany = document.createElement('div');
             animateValue(barCompany, 0, arrayOfCompany[i], 3000);
             barCompany.style.fontSize = '40px';
             barCompany.textContent = arrayOfCompany[i];
-            parentElementCompany.append(barCompany);
+            //parentElementCompany.append();
             //company names
             let barCompanyNames = document.createElement('p');
             barCompanyNames.classList.add('text-dark');
             barCompanyNames.style.paddingLeft = '30px';
             barCompanyNames.style.fontSize = '30px';
             barCompanyNames.textContent = arrayOfComanyNames[i];
-            $(parentElementCompany).append(barCompanyNames);
+            $(parentElementCompany).append(barCompany, barCompanyNames);
             
         };
         $(parentElementCompany).hide();
@@ -299,11 +299,33 @@ $('.carousel').carousel({
   //document.getElementById('bar-container').append(unit); 
 
 
+
+
+
 let num = [1, 2, 5, 10 ,22, 25, 40, 45];
+let obBtn = document.getElementById('observeBtn');
+$('#observe').hide();
+
+
+let vals = 0;
+$(obBtn).click((e)=>{
+++vals;
+e.preventDefault();
+
+$('#observe').toggle(500);
+if(vals === 1){
+    $('.hiddenIf').css('opacity',  0.2);
+}
+else if(vals === 2){
+    $('.hiddenIf').css('opacity',  1);
+    vals = 0;
+    }
+
+   
+})
 
 
 
-//
 function binarySearch(array, target) {
 
     let left = 0;
