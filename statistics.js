@@ -327,15 +327,29 @@ else if(vals === 2){
 
 
 
+(function(){
+    $('#algos,#complex,.des-complex').hide();
 
-$('#algos,#complex,.des-complex').hide();
+    let counter = 0;
 
-$('#listOfAlgo').on('click',()=>{
-   
-    
-    $('#algos,#complex,.des-complex').toggle(500);
+    $('#listOfAlgo').on('click',()=>{
+       ++counter;
+        if(counter){
+            $('#algos').delay(100).show(200);
+            $('#complex,.des-complex').delay(100).show(400);
+        }
 
-});
+        if(counter === 2){
+            $('#algos').delay(100).hide(200);
+            $('#complex,.des-complex').delay(100).hide(400);
+            return counter = 0;
+        }
+        
+        
+
+    });
+})();
+
 
 
 
@@ -393,8 +407,26 @@ function binarySearch(array, target) {
 
 
 
+const binarySearch = (array, target)=>{
+    const left = 0;
+    const right = array.length - 1;
 
+    while(left <= right){
+        const mid = Math.floor((left + right) / 2);
+        if(target === array[mid]){
+            return mid;
+        }
+        if(target > array[mid]){
+            left = mid + 1;
+        }else if(target < array[mid]){
+            right = mid + 1;
+        }
+    }
+    return false;
 
+}
+
+console.log(binarySearch([1, 4, 6, 8, 10], 6)); 
 
 
 
