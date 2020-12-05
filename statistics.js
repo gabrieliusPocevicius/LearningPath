@@ -176,8 +176,6 @@ function calculateData(){
    topThree =  arrayOfTopics[0] + arrayOfTopics[1] + arrayOfTopics[2];
    console.log(topThree);
 
-
-
 total = arrayOfTopics.reduce((a, b)=>{return a+b});
 
 
@@ -407,35 +405,6 @@ function binarySearch(array, target) {
 
 
 
-const binarySearch = (array, target)=>{
-    const left = 0;
-    const right = array.length - 1;
-
-    while(left <= right){
-        const mid = Math.floor((left + right) / 2);
-        if(target === array[mid]){
-            return mid;
-        }
-        if(target > array[mid]){
-            left = mid + 1;
-        }else if(target < array[mid]){
-            right = mid + 1;
-        }
-    }
-    return false;
-
-}
-
-console.log(binarySearch([1, 4, 6, 8, 10], 6)); 
-
-
-
-
-
-
-
-
-
 
 
 
@@ -448,6 +417,7 @@ const search = (array, target)=>{
         if(target === array[mid]){// if iterator reaches array index of specified number
             return mid;//return result
         }else if(target < array[mid]){
+
             // moving right 
             right = mid - 1;
         }else{
@@ -455,3 +425,28 @@ const search = (array, target)=>{
         }
     }
 }
+
+const combination = (array) => {
+    if(array.length === 0)return [ [] ];
+
+    
+    
+    
+    const firstEl = array[0];
+    
+
+
+
+    const combsWithOutFirst = combination(rest);
+    const combsWithFirst = [];
+
+    combsWithOutFirst.forEach(comb =>{
+        const combWithFirst = [...comb, firstEl];
+
+    })
+
+       
+   
+}
+
+console.log(combination(['a', 'b', 'c']));
