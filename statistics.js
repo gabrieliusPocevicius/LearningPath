@@ -324,20 +324,42 @@ else if(vals === 2){
 });
 
 
+let isHidden = false;
+function hideAlgos(){
+  
+        $('#x-btn').on('click', (e)=>{
 
+            
+
+            $('#animatedTitle').animate({
+                fontSize: 0 + 'px'
+
+            }, 300);
+            $('#algos,#complex,.des-complex').slideUp(700);
+        });
+        return isHidden = true;
+
+}
+hideAlgos();
 (function(){
-    $('#algos,#complex,.des-complex').hide();
+    //$('#algos,#complex,.des-complex').hide();
 
     let counter = 0;
 
     $('#listOfAlgo').on('click',()=>{
        ++counter;
         if(counter){
+            $('#animatedTitle').animate({
+                fontSize: 36 + 'px'
+
+            }, 300);
             $('#algos').delay(100).show(200);
             $('#complex,.des-complex').delay(100).show(400);
+            return isHidden = false;
         }
+        
 
-        if(counter === 2){
+        if(counter === 2 && isHidden === false){
             $('#algos').delay(100).hide(200);
             $('#complex,.des-complex').delay(100).hide(400);
             return counter = 0;
@@ -346,6 +368,10 @@ else if(vals === 2){
         
 
     });
+
+    
+
+
 })();
 
 
@@ -426,27 +452,17 @@ const search = (array, target)=>{
     }
 }
 
-const combination = (array) => {
+/* const combination = (array) => {
     if(array.length === 0)return [ [] ];
-
-    
-    
-    
     const firstEl = array[0];
-    
-
-
-
     const combsWithOutFirst = combination(rest);
     const combsWithFirst = [];
-
     combsWithOutFirst.forEach(comb =>{
         const combWithFirst = [...comb, firstEl];
 
     })
 
-       
-   
+
 }
 
-console.log(combination(['a', 'b', 'c']));
+console.log(combination(['a', 'b', 'c'])); */

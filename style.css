@@ -1,3 +1,44 @@
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+h4{
+    color: #008cff !important;
+
+}
+
+
+#animatedTitle{
+    font-size: 36px;
+
+}
 .jumbotron {
    
     -webkit-columns: 100px 1;
@@ -135,6 +176,84 @@ footer{
     bottom: 0;
 }
 
+
+.container {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.checkbox {
+    width: 100%;
+    margin: 15px auto;
+    position: relative;
+    display: block;
+}
+
+.checkbox input[type="checkbox"] {
+    width: auto;
+    opacity: 0.00000001;
+    position: absolute;
+    left: 0;
+    margin-left: -20px;
+}
+.checkbox label {
+    position: relative;
+}
+.checkbox label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 22px;
+    height: 22px;
+    transition: transform 0.28s ease;
+    border-radius: 3px;
+    border: 2px solid #7bbe72;
+}
+.checkbox label:after {
+  content: '';
+    display: block;
+    width: 10px;
+    height: 5px;
+    border-bottom: 2px solid #7bbe72;
+    border-left: 2px solid #7bbe72;
+    -webkit-transform: rotate(-45deg) scale(0);
+    transform: rotate(-45deg) scale(0);
+    transition: transform ease 0.25s;
+    will-change: transform;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+}
+.checkbox input[type="checkbox"]:checked ~ label::before {
+    color: #7bbe72;
+}
+
+.checkbox input[type="checkbox"]:checked ~ label::after {
+    -webkit-transform: rotate(-45deg) scale(1);
+    transform: rotate(-45deg) scale(1);
+}
+
+.checkbox label {
+    min-height: 34px;
+    display: block;
+    padding-left: 40px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    
+}
+.checkbox label span {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: 0;
+}
+
 #gotoTop {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
@@ -227,36 +346,7 @@ p:hover{
 }
 
 
-:root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-}
+
 .display-6{
     
     font-size: 22px;
