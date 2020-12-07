@@ -472,11 +472,11 @@ console.log(combination(['a', 'b', 'c'])); */
 let trades = Array.from({length: 10}, () => Math.floor(Math.random() * 40));
 
 
-let buy = ''
+
 console.log(trades);
 
 
-function predict(trades, index) {
+function predict(trades, buy , sell) {
 
     
 
