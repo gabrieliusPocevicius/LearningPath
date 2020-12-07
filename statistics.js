@@ -323,7 +323,6 @@ else if(vals === 2){
    
 });
 
-
 let isHidden = false;
 function hideAlgos(){
   
@@ -342,7 +341,7 @@ function hideAlgos(){
 }
 hideAlgos();
 (function(){
-    //$('#algos,#complex,.des-complex').hide();
+    $('#algos,#complex,.des-complex').hide();
 
     let counter = 0;
 
@@ -466,3 +465,32 @@ const search = (array, target)=>{
 }
 
 console.log(combination(['a', 'b', 'c'])); */
+
+//predict next price
+
+
+let trades = Array.from({length: 10}, () => Math.floor(Math.random() * 40));
+
+
+let buy = ''
+console.log(trades);
+
+
+function predict(trades, index) {
+
+    
+
+    let oldTrades = trades[0];
+    let newTrades = trades[trades.length - 1];
+    //console.log(oldTrades);
+    //console.log(newTrades);
+    /* while (oldTrades <= trades.length) {
+        let average = (oldTrades / newTrades) / 2;
+        console.log(average);
+        return false;
+    } */
+    return false;
+
+}
+
+predict(trades);
