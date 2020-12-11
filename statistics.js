@@ -469,28 +469,3 @@ console.log(combination(['a', 'b', 'c'])); */
 //predict next price
 
 
-let trades = Array.from({length: 10}, () => Math.floor(Math.random() * 40));
-
-
-
-console.log(trades);
-
-
-function predict(trades, buy , sell) {
-
-    
-
-    let oldTrades = trades[0];
-    let newTrades = trades[trades.length - 1];
-    //console.log(oldTrades);
-    //console.log(newTrades);
-    /* while (oldTrades <= trades.length) {
-        let average = (oldTrades / newTrades) / 2;
-        console.log(average);
-        return false;
-    } */
-    return false;
-
-}
-
-predict(trades);
