@@ -9,7 +9,17 @@ trades.forEach(a=>{
 }) */
 
 
-console.log('trades: ' + trades);
+
++{
+    valueOf:function(){
+        return console.log('100') 
+    }
+
+}
+
+
+
+
 
 
 //https://authenticjobs.com/job/3657/nasdaq-front-end-developer-user-interface/

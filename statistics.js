@@ -432,7 +432,6 @@ function binarySearch(array, target) {
 
 
 
-
 const search = (array, target)=>{
 
     let left = 0;//left is first number
