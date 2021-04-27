@@ -117,12 +117,28 @@ li{
     width: auto;
     height: auto;
     
-    padding: 10px;
-    margin-top: 2px;
+
+
     margin-right: 0px !important;
     margin-left: 0px !important;
     
 }
+
+.card {
+    border-bottom: rgba(10, 10, 10, 0.418) 1px solid !important;
+    background-color: #191a1b !important;
+    color: #f8f9fab9 !important;
+}
+.card-body{
+    border-bottom: rgba(10, 10, 10, 0.6) 1px solid !important;
+    background-color: #191a1b !important;
+    color: #f8f9fab9 !important;
+}
+.btn-link{
+
+    color: #f8f9fab9 !important;
+};
+
 li:hover{
     border-bottom: rgba(10, 10, 10, 0.418) 1px solid;
     list-style: none !important;
@@ -130,6 +146,12 @@ li:hover{
     background-color: #151516;
     width: auto;
     height: auto; 
+}
+.hideIt{
+    display: none;
+}
+.showIt{
+    display: block;
 }
 
 .btn-outline-light{
