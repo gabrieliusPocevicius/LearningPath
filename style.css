@@ -31,9 +31,11 @@
 }
 h4{
     color: #008cff !important;
-
 }
 
+#likeCounter{
+    cursor: default;
+}
 
 #animatedTitle{
     font-size: 36px;

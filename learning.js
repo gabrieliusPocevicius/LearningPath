@@ -10,15 +10,34 @@ trades.forEach(a=>{
 
 
 
-+{
+/* +{
     valueOf:function(){
         return console.log('100') 
     }
 
+} */
+
+let likes = 0;
+ if (localStorage.length) {
+   likes = localStorage.getItem("likes");
+ }
+localStorage.setItem("likes", likes);
+document.getElementById("likeCounter").textContent = likes;
+function likeCount(){
+
+
+ let c = document.getElementById("likeCounter");
+    
+    document.getElementById('liked').addEventListener('click', (e)=>{
+       e.preventDefault()
+      ++likes
+       c.textContent = likes;
+      localStorage.setItem("likes", likes);
+    })
+     
 }
 
-
-
+likeCount();
 
 
 
