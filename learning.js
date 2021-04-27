@@ -20,11 +20,11 @@ function likeCount() {
 likeCount();
 
 function toggleCards() {
-  let id = 1;
+ 
   let showCards = document.getElementById("toggle-card-header");
-
+  let x = document.getElementById(`question-container`);
   showCards.addEventListener("click", (e) => {
-    let x = document.getElementById(`heading${id}`);
+   
     if (x.style.display === "none") {
       x.style.display = "block";
     } else {
