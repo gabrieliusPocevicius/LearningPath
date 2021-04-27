@@ -115,7 +115,7 @@
       <h2 class="mb-0">
         <p class="mb-0">
           <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Explain what is Javascript
+            Explain what is Javascript?
           </button>
         </p>
       </h2>
@@ -145,7 +145,7 @@ Below is the list of 7 <b>data types</b> supported by Javascript:-
       <h2 class="mb-0">
         <p class="mb-0">
           <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            What does the close() do in Javascript
+            What does the close() do in Javascript?
           </button>
         </p>
       </h2>
@@ -170,11 +170,12 @@ Below is the list of 7 <b>data types</b> supported by Javascript:-
       </div>
     </div>
   </div>
+
   <div class="card">
     <div class="card-header" id="headingFour">
         <p class="mb-0">
           <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-            Explain Closures in JavaScript
+            Explain Closures in JavaScript?
           </button>
         </p>
     </div>
@@ -185,9 +186,95 @@ Below is the list of 7 <b>data types</b> supported by Javascript:-
       </div>
     </div>
   </div>
+  <div class="card">
+    <div class="card-header" id="headingFive">
+        <p class="mb-0">
+          <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+            Explain JavaScript Event Delegation Model?
+          </button>
+        </p>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div class="card-body col-sm-6">
+JavaScript event delegation is a simple technique by which you add a <b>single event handler</b> to a <b>parent</b> element in order to avoid having to add event handlers to multiple child elements.
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" id="headingSix">
+        <p class="mb-0">
+          <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+            Describe negative infinity in JavaScript?
+          </button>
+        </p>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+      <div class="card-body col-sm-6">
+<code>NEGATIVE_INFINITY</code> property represents negative infinity and is a number in javascript, which is derived by <b>dividing negative number by zero</b>. It can be better understood as a number that is lower than any other number. Its properties are as follows:
+– A number of objects need not to be created to access this static property.
+– The value of negative infinity is the same as the negative value of the infinity property of the global object.
+
+<h5>The values behave differently than the mathematical infinity:</h5>
+
+    Any positive value, including <code>POSITIVE_INFINITY</code>, multiplied by <code>NEGATIVE_INFINITY</code> is <code>NEGATIVE_INFINITY</code>.<br>
+    Any negative value, including <code>NEGATIVE_INFINITY</code> , multiplied by <code>NEGATIVE_INFINITY</code> is <code>POSITIVE_INFINITY</code>.<br>
+    Zero multiplied by <code>NEGATIVE_INFINITY</code> is <code>NaN</code>.<br>
+    NaN multiplied by <code>NEGATIVE_INFINITY</code> is <code>NaN</code>.<br>
+    <code>NEGATIVE_INFINITY</code>, divided by any negative value except <code>NEGATIVE_INFINITY</code>, is <code>POSITIVE_INFINITY</code>.<br>
+    <code>NEGATIVE_INFINITY</code>, divided by any positive value except <code>POSITIVE_INFINITY</code>, is NEGATIVE_INFINITY.<br>
+    <code>NEGATIVE_INFINITY</code>, divided by either <code>NEGATIVE_INFINITY</code> or <code>POSITIVE_INFINITY</code>, is NaN.<br>
+    Any number divided by <code>NEGATIVE_INFINITY</code> is zero.<br>
+
+      </div>
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-header" id="heading7">
+        <p class="mb-0">
+          <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+            Explain function hoisting JavaScript
+          </button>
+        </p>
+    </div>
+    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+      <div class="card-body col-sm-6">
+JavaScript’s default behavior that allows moving declarations to the top is called Hoisting. The 2 ways of creating functions in JavaScript are <div class="text-info d-inline">Function Declaration</div> and <div class="text-info d-inline">Function Expression</div>. Let’s find out more about these:
+
+<br>
+A function with the specific parameters is known as function declarations. To create a variable in JavaScript is called declarations. <br>
+ <br>
+
+<br>
+<div class="text-info d-inline">Function Declaration</div><br>
+hoisted(); // logs "foo" <br>
+
+<div class="m-2 p-2 bg-darker">
+  
+<code>function</code> hoisted() { <br>
+
+<div class="m-3">
+    console.<code>log</code>(<div class="text-info">'foo'</div>)
+  <br>}<br>
+</div>
+<br>
+</div>
+<div class="text-info d-inline">Function Expression</div><br>
+notHoisted(); // TypeError: notHoisted is not a function<br>
+<div class="m-2 p-2 bg-darker">
+var notHoisted = <code>function</code>() {<br>
+  <div class="m-3">
+  console.<code>log</code>(<div class="text-info">'bar'</div>)<br>
+}<br>  
+</div>
+
+</div>
+      </div>
+    </div>
+  </div>
 </div>
   </li>
 </div>
+
   <div class="jumbotron text-center " style="margin-bottom:0; background-color:#1d1e20">
     <div class="text-light">
       <h1 class="text-primary">Learning Path Statistics</h1>
@@ -224,6 +311,9 @@ Below is the list of 7 <b>data types</b> supported by Javascript:-
             <p>Learning something new is great, applying that knowledge is far better.</p>
           </div>
         </div>
+
+
+
 
         <div class="col">
           <div id="listOfAlgo" class="btn btn-outline-primary">Recommended Algorithms</div>
