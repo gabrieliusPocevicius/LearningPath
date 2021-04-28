@@ -110,168 +110,167 @@
 </li>
   <li id="question-container" class="col-sm-9">
     <div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <p class="mb-0">
-          <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Explain what is Javascript?
-          </button>
-        </p>
-      </h2>
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <p class="mb-0">
+              <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Explain what is Javascript?
+              </button>
+            </p>
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body col-sm-6">
+            <h3>Javascript</h3>
+
+    Javascript is an object-oriented computer programming language commonly used to create interactive effects within web browsers.It is first used by the Netscape browser, that provides access to the HTML document object model (DOM), provides access to the browser object model (BOM). Javascript syntax looks a lot like java, c or c++ syntax.
+
+    Below is the list of 7 <b>data types</b> supported by Javascript:-
+        <ul>    
+        <li><code>Undefined</code></li>
+        <li><code>Null</code></li>
+        <li><code>Boolean</code></li>
+        <li><code>String</code></li>
+        <li><code>Symbol</code></li>
+        <li><code>Number</code></li>
+        <li><code>Object</code></li>
+        </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <p class="mb-0">
+              <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                What does the close() do in Javascript?
+              </button>
+            </p>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body col-sm-6">
+            In Javascript <code>close()</code> method is used to close the current window. You must write window.close() to ensure that this command is associated with a window object and not some other JavaScript object.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+            <p class="mb-0">
+              <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                What is the difference between let and var?
+              </button>
+            </p>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body col-sm-6">
+            Both var and let are used for variable/ method declaration in JavaScript but the main difference between let and var is that var is function scoped whereas let is block scoped.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+            <p class="mb-0">
+              <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                Explain Closures in JavaScript?
+              </button>
+            </p>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body col-sm-6">
+          <b>Closures</b> are the combination of lexical environment and function within which the function was declared. This allows JavaScript programmers to write better, more creative, concise and expressive codes. The closure will consist of all the local variables that were in-scope when the closure was created.
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFive">
+            <p class="mb-0">
+              <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                Explain JavaScript Event Delegation Model?
+              </button>
+            </p>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+          <div class="card-body col-sm-6">
+    JavaScript event delegation is a simple technique by which you add a <b>single event handler</b> to a <b>parent</b> element in order to avoid having to add event handlers to multiple child elements.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingSix">
+            <p class="mb-0">
+              <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                Describe negative infinity in JavaScript?
+              </button>
+            </p>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+          <div class="card-body col-sm-6">
+    <code>NEGATIVE_INFINITY</code> property represents negative infinity and is a number in javascript, which is derived by <b>dividing negative number by zero</b>. It can be better understood as a number that is lower than any other number. Its properties are as follows:
+    – A number of objects need not to be created to access this static property.
+    – The value of negative infinity is the same as the negative value of the infinity property of the global object.
+
+    <h5>The values behave differently than the mathematical infinity:</h5>
+
+        Any positive value, including <code>POSITIVE_INFINITY</code>, multiplied by <code>NEGATIVE_INFINITY</code> is <code>NEGATIVE_INFINITY</code>.<br>
+        Any negative value, including <code>NEGATIVE_INFINITY</code> , multiplied by <code>NEGATIVE_INFINITY</code> is <code>POSITIVE_INFINITY</code>.<br>
+        Zero multiplied by <code>NEGATIVE_INFINITY</code> is <code>NaN</code>.<br>
+        NaN multiplied by <code>NEGATIVE_INFINITY</code> is <code>NaN</code>.<br>
+        <code>NEGATIVE_INFINITY</code>, divided by any negative value except <code>NEGATIVE_INFINITY</code>, is <code>POSITIVE_INFINITY</code>.<br>
+        <code>NEGATIVE_INFINITY</code>, divided by any positive value except <code>POSITIVE_INFINITY</code>, is NEGATIVE_INFINITY.<br>
+        <code>NEGATIVE_INFINITY</code>, divided by either <code>NEGATIVE_INFINITY</code> or <code>POSITIVE_INFINITY</code>, is NaN.<br>
+        Any number divided by <code>NEGATIVE_INFINITY</code> is zero.<br>
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="heading7">
+            <p class="mb-0">
+              <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                Explain function hoisting JavaScript
+              </button>
+            </p>
+        </div>
+        <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+          <div class="card-body col-sm-6">
+    JavaScript’s default behavior that allows moving declarations to the top is called Hoisting. The 2 ways of creating functions in JavaScript are <div class="text-info d-inline">Function Declaration</div> and <div class="text-info d-inline">Function Expression</div>. Let’s find out more about these:
+
+    <br>
+    A function with the specific parameters is known as function declarations. To create a variable in JavaScript is called declarations. <br>
+    <br>
+
+    <br>
+    <div class="text-info d-inline">Function Declaration</div><br>
+    hoisted(); // logs "foo" <br>
+
+    <div class="m-2 p-2 bg-darker">
+      
+    <code>function</code> hoisted() { <br>
+
+    <div class="m-3">
+        console.<code>log</code>(<div class="text-info">'foo'</div>)
+      <br>}<br>
+    </div>
+    <br>
+    </div>
+    <div class="text-info d-inline">Function Expression</div><br>
+    notHoisted(); // TypeError: notHoisted is not a function<br>
+    <div class="m-2 p-2 bg-darker">
+    var notHoisted = <code>function</code>() {<br>
+      <div class="m-3">
+      console.<code>log</code>(<div class="text-info">'bar'</div>)<br>
+    }<br>  
     </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body col-sm-6">
-        <h3>Javascript</h3>
-
-Javascript is an object-oriented computer programming language commonly used to create interactive effects within web browsers.It is first used by the Netscape browser, that provides access to the HTML document object model (DOM), provides access to the browser object model (BOM). Javascript syntax looks a lot like java, c or c++ syntax.
-
-Below is the list of 7 <b>data types</b> supported by Javascript:-
-    <ul>    
-    <li><code>Undefined</code></li>
-    <li><code>Null</code></li>
-    <li><code>Boolean</code></li>
-    <li><code>String</code></li>
-    <li><code>Symbol</code></li>
-    <li><code>Number</code></li>
-    <li><code>Object</code></li>
-    </ul>
+    </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h2 class="mb-0">
-        <p class="mb-0">
-          <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            What does the close() do in Javascript?
-          </button>
-        </p>
-      </h2>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body col-sm-6">
-        In Javascript <code>close()</code> method is used to close the current window. You must write window.close() to ensure that this command is associated with a window object and not some other JavaScript object.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-        <p class="mb-0">
-          <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-            What is the difference between let and var?
-          </button>
-        </p>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body col-sm-6">
-        Both var and let are used for variable/ method declaration in JavaScript but the main difference between let and var is that var is function scoped whereas let is block scoped.
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header" id="headingFour">
-        <p class="mb-0">
-          <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-            Explain Closures in JavaScript?
-          </button>
-        </p>
-    </div>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-      <div class="card-body col-sm-6">
-       <b>Closures</b> are the combination of lexical environment and function within which the function was declared. This allows JavaScript programmers to write better, more creative, concise and expressive codes. The closure will consist of all the local variables that were in-scope when the closure was created.
-
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingFive">
-        <p class="mb-0">
-          <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-            Explain JavaScript Event Delegation Model?
-          </button>
-        </p>
-    </div>
-    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-      <div class="card-body col-sm-6">
-JavaScript event delegation is a simple technique by which you add a <b>single event handler</b> to a <b>parent</b> element in order to avoid having to add event handlers to multiple child elements.
-      </div>
-    </div>
-  </div>
-    <div class="card">
-    <div class="card-header" id="headingSix">
-        <p class="mb-0">
-          <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-            Describe negative infinity in JavaScript?
-          </button>
-        </p>
-    </div>
-    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-      <div class="card-body col-sm-6">
-<code>NEGATIVE_INFINITY</code> property represents negative infinity and is a number in javascript, which is derived by <b>dividing negative number by zero</b>. It can be better understood as a number that is lower than any other number. Its properties are as follows:
-– A number of objects need not to be created to access this static property.
-– The value of negative infinity is the same as the negative value of the infinity property of the global object.
-
-<h5>The values behave differently than the mathematical infinity:</h5>
-
-    Any positive value, including <code>POSITIVE_INFINITY</code>, multiplied by <code>NEGATIVE_INFINITY</code> is <code>NEGATIVE_INFINITY</code>.<br>
-    Any negative value, including <code>NEGATIVE_INFINITY</code> , multiplied by <code>NEGATIVE_INFINITY</code> is <code>POSITIVE_INFINITY</code>.<br>
-    Zero multiplied by <code>NEGATIVE_INFINITY</code> is <code>NaN</code>.<br>
-    NaN multiplied by <code>NEGATIVE_INFINITY</code> is <code>NaN</code>.<br>
-    <code>NEGATIVE_INFINITY</code>, divided by any negative value except <code>NEGATIVE_INFINITY</code>, is <code>POSITIVE_INFINITY</code>.<br>
-    <code>NEGATIVE_INFINITY</code>, divided by any positive value except <code>POSITIVE_INFINITY</code>, is NEGATIVE_INFINITY.<br>
-    <code>NEGATIVE_INFINITY</code>, divided by either <code>NEGATIVE_INFINITY</code> or <code>POSITIVE_INFINITY</code>, is NaN.<br>
-    Any number divided by <code>NEGATIVE_INFINITY</code> is zero.<br>
-
-      </div>
-    </div>
-  </div>
-    <div class="card">
-    <div class="card-header" id="heading7">
-        <p class="mb-0">
-          <button  class="btn btn-dark text-left" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
-            Explain function hoisting JavaScript
-          </button>
-        </p>
-    </div>
-    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
-      <div class="card-body col-sm-6">
-JavaScript’s default behavior that allows moving declarations to the top is called Hoisting. The 2 ways of creating functions in JavaScript are <div class="text-info d-inline">Function Declaration</div> and <div class="text-info d-inline">Function Expression</div>. Let’s find out more about these:
-
-<br>
-A function with the specific parameters is known as function declarations. To create a variable in JavaScript is called declarations. <br>
- <br>
-
-<br>
-<div class="text-info d-inline">Function Declaration</div><br>
-hoisted(); // logs "foo" <br>
-
-<div class="m-2 p-2 bg-darker">
-  
-<code>function</code> hoisted() { <br>
-
-<div class="m-3">
-    console.<code>log</code>(<div class="text-info">'foo'</div>)
-  <br>}<br>
-</div>
-<br>
-</div>
-<div class="text-info d-inline">Function Expression</div><br>
-notHoisted(); // TypeError: notHoisted is not a function<br>
-<div class="m-2 p-2 bg-darker">
-var notHoisted = <code>function</code>() {<br>
-  <div class="m-3">
-  console.<code>log</code>(<div class="text-info">'bar'</div>)<br>
-}<br>  
-</div>
-
-</div>
-      </div>
-    </div>
-  </div>
-</div>
   </li>
 </div>
 
